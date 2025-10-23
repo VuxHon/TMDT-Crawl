@@ -121,5 +121,5 @@ class Sapo:
             "language_code": "vi"
         }
         response = requests.get(url, params=params, headers=self.headers)
-        print(spx_tn.upper())
+        logging.info(f"SPX TN: {spx_tn.upper()}")
         return response

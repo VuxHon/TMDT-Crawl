@@ -77,7 +77,7 @@ class Helper:
         return int(date_obj.timestamp())
     
     @staticmethod
-    def to_unix_timestamp_millisecond(date_input, is_end_date=False, timezone='Asia/Ho_Chi_Minh'):
+    def to_unix_timestamp_milliseconds(date_input, is_end_date=False, timezone='Asia/Ho_Chi_Minh'):
         return str(Helper.to_unix_timestamp(date_input, is_end_date, timezone) * 1000)
     
     @staticmethod

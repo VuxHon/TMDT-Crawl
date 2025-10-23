@@ -168,9 +168,9 @@ class Tiktok:
         file_key = self.get_file_key(export_task_id)
         download_url = self.get_url_download(export_task_id,file_key)
         content = self.dowload_content(download_url)
-        with open(f"orders/{file_name}.csv", "wb") as f:
+        with open(f"orders_tiktok/{file_name}.csv", "wb") as f:
             f.write(content.content)
-        return f"orders/{file_name}.csv"
+        return f"orders_tiktok/{file_name}.csv"
     
     def get_export_history_aff_orders(self):
         url = "https://affiliate.tiktok.com/api/v1/affiliate/export_history?user_language=vi-VN&shop_region=VN"
@@ -237,7 +237,7 @@ class Tiktok:
         return download_url
         
     def get_income_export(self, begin_date, end_date):
-        print(begin_date, end_date)
+        logging.info(f"Begin date: {begin_date}, End date: {end_date}")
         url = "https://seller-vn.tiktok.com/api/v2/pay/settlement/file/export"
         payload = {
             "period": {
@@ -258,6 +258,6 @@ class Tiktok:
         logging.info(download_url)
         content = self.dowload_content(download_url)
         os.makedirs("income", exist_ok=True)
-        with open(f"income/income_{time.time()}.csv", "wb") as f:
+        with open(f"income_tiktok/income_{time.time()}.csv", "wb") as f:
             f.write(content.content)
-        return f"income/income_{time.time()}.csv"
+        return f"income_tiktok/income_{time.time()}.csv"
