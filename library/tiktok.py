@@ -2,7 +2,6 @@ import requests
 import library.config as cf
 from library.lark import Lark
 from library.helper import Helper
-import logging
 from typing import Tuple, Dict, Any, Optional
 import time
 from random import randrange
@@ -168,9 +167,10 @@ class Tiktok:
         file_key = self.get_file_key(export_task_id)
         download_url = self.get_url_download(export_task_id,file_key)
         content = self.dowload_content(download_url)
-        with open(f"orders_tiktok/{file_name}.csv", "wb") as f:
+        os.makedirs("../ConvertDataEcom/data/TTS/ORDER_TTS", exist_ok=True)
+        with open(f"../ConvertDataEcom/data/TTS/ORDER_TTS/{file_name}.csv", "wb") as f:
             f.write(content.content)
-        return f"orders_tiktok/{file_name}.csv"
+        return f"../ConvertDataEcom/data/TTS/ORDER_TTS/{file_name}.csv"
     
     def get_export_history_aff_orders(self):
         url = "https://affiliate.tiktok.com/api/v1/affiliate/export_history?user_language=vi-VN&shop_region=VN"
@@ -208,9 +208,10 @@ class Tiktok:
         task_id = self.get_export_history_aff_orders()
         export_link = self.export_link_aff_orders(task_id)
         content = self.dowload_content(export_link)
-        with open(f"orders_aff_tiktok/aff_orders_{time_start}_{time_end}.csv", "wb") as f:
+        os.makedirs("../ConvertDataEcom/data/TTS/AFF_ORDERS", exist_ok=True)
+        with open(f"../ConvertDataEcom/data/TTS/AFF_ORDERS/aff_orders_{time_start}_{time_end}.csv", "wb") as f:
             f.write(content.content)
-        return f"orders_aff_tiktok/aff_orders_{time_start}_{time_end}.csv"
+        return f"../ConvertDataEcom/data/TTS/AFF_ORDERS/aff_orders_{time_start}_{time_end}.csv"
     
     def get_income_export_file_id(self):
         url = "https://seller-vn.tiktok.com/api/v2/pay/settlement/file/list"
@@ -257,7 +258,44 @@ class Tiktok:
         download_url = self.get_income_export_url(file_id)
         logging.info(download_url)
         content = self.dowload_content(download_url)
-        os.makedirs("income_tiktok", exist_ok=True)
-        with open(f"income_tiktok/income_{begin_date}_{end_date}.csv", "wb") as f:
+        os.makedirs("../ConvertDataEcom/data/Income", exist_ok=True)
+        with open(f"../ConvertDataEcom/data/Income/income_{begin_date}_{end_date}.csv", "wb") as f:
             f.write(content.content)
-        return f"income_tiktok/income_{begin_date}_{end_date}.csv"
+        return f"../ConvertDataEcom/data/Income/income_{begin_date}_{end_date}.csv"
+    
+    def get_order_aff_success(self, time_start, time_end, page=1):
+        logging.info(f"Time start: {time_start}, Time end: {time_end}")
+        url = "https://affiliate.tiktok.com/api/v1/affiliate/orders?shop_region=VN"
+        payload = {
+            "conditions": {
+                "time_period": {
+                    "beginning_time": time_start,
+                    "ending_time": time_end
+                },
+                "bill_type": 1,
+                "cod_type": 0,
+                "order_status": 2
+            },
+            "page": page,
+            "page_size": 100
+        }
+        response = requests.post(url, headers=self.headers, json=payload).json()
+        return response
+    
+    def get_statement_info(self, reference_id):
+        url = f"https://seller-vn.tiktok.com/api/v1/pay/statement/order/list?size=5&page_type=6&reference_id={reference_id}"
+        response = requests.get(url, headers=self.headers).json()
+        return response
+    
+    def get_statement_transaction_detail(self, statement_detail_id):
+        url = f"https://seller-vn.tiktok.com/api/v1/pay/statement/transaction/detail?page_type=8&statement_detail_id={statement_detail_id}"
+        response = requests.get(url, headers=self.headers).json()
+        return response
+    
+    def get_search_fuzzy(self, fuzzy_value):
+        url = f"https://seller-vn.tiktok.com/api/v1/reverse/search_fuzzy?language=vi-VN"
+        payload = {
+            "fuzzy_value": fuzzy_value
+        }
+        response = requests.post(url, headers=self.headers, json=payload)
+        return response
