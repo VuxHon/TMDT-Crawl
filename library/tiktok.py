@@ -5,6 +5,7 @@ from library.helper import Helper
 from typing import Tuple, Dict, Any, Optional
 import time
 from random import randrange
+import json
 import logging
 import os
 def create_curl_request(url, payload, headers):
@@ -215,8 +216,16 @@ class Tiktok:
     
     def get_income_export_file_id(self):
         url = "https://seller-vn.tiktok.com/api/v2/pay/settlement/file/list"
-        response = requests.get(url, headers=self.headers).json()
-        file = response['data']['files'][0]
+        response = requests.get(url, headers=self.headers)
+        response_data = response.json()
+        
+        # Kiểm tra xem có files không
+        if 'data' not in response_data or 'files' not in response_data['data'] or len(response_data['data']['files']) == 0:
+            logging.warning("No files found in response, waiting for 2 seconds")
+            time.sleep(2)
+            return self.get_income_export_file_id()
+        
+        file = response_data['data']['files'][0]
         if file['status'] != 2:
             logging.info(f"File is not finished, waiting for 2 seconds, file_id: {file['file_id']}")
             time.sleep(2)
@@ -299,3 +308,28 @@ class Tiktok:
         }
         response = requests.post(url, headers=self.headers, json=payload)
         return response
+    
+    def post_overview_stat(self, start_time, end_time):
+        url = "https://seller-vn.tiktok.com/oec_ads/shopping/v1/oec/stat/post_overview_stat?locale=vi&language=vi&oec_seller_id=7495294084223568440&aadvid=7278963815759364098"
+        header = self.headers
+        header['content-type'] = 'application/json; charset=utf-8'
+        payload = {
+            "query_list": [
+                "cost",
+                "onsite_roi2_shopping_sku",
+                "cost_per_onsite_roi2_shopping_sku",
+                "onsite_roi2_shopping_value",
+                "onsite_roi2_shopping"
+            ],
+            "start_time": start_time,
+            "end_time": end_time,
+            "campaign_shop_automation_type": 2,
+            "external_type_list": [
+                "307",
+                "304",
+                "305"
+            ]
+        }
+        response = requests.post(url, headers=header, json=payload)
+        logging.info(f"API Response: {response.content}")
+        return json.loads(response.content)
