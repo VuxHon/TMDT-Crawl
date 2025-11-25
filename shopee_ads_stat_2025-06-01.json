@@ -1,0 +1,1340 @@
+{
+    "code": 0,
+    "msg": "OK",
+    "debug_detail": "",
+    "validation_error_list": null,
+    "data": {
+        "key": "new_cpc_homepage",
+        "report_by_time": [
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748710800",
+                "metrics": {
+                    "broad_cir": 0.0945796355486173,
+                    "broad_gmv": 112100000000,
+                    "broad_order": 4,
+                    "broad_order_amount": 6,
+                    "broad_roi": 10.573100585547978,
+                    "checkout": 4,
+                    "checkout_rate": 0.4,
+                    "click": 123,
+                    "cost": 10602377145,
+                    "cpc": 2650594286,
+                    "cpdc": 3534125715,
+                    "cr": 0.032520325203252036,
+                    "ctr": 0.028204540243063517,
+                    "direct_cr": 0.024390243902439025,
+                    "direct_cir": 0.1411767928761651,
+                    "direct_gmv": 75100000000,
+                    "direct_order": 3,
+                    "direct_order_amount": 4,
+                    "direct_roi": 7.0833171630209915,
+                    "impression": 4361,
+                    "avg_rank": 27,
+                    "product_click": 8,
+                    "product_impression": 2015,
+                    "product_ctr": 0.003970223325062035,
+                    "location_in_ads": 112786,
+                    "reach": 0,
+                    "page_views": 96,
+                    "unique_visitors": 0,
+                    "view": 10,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748714400",
+                "metrics": {
+                    "broad_cir": 0.18747275550408718,
+                    "broad_gmv": 36700000000,
+                    "broad_order": 1,
+                    "broad_order_amount": 2,
+                    "broad_roi": 5.3341084005040855,
+                    "checkout": 1,
+                    "checkout_rate": 0.16666666666666666,
+                    "click": 60,
+                    "cost": 6880250127,
+                    "cpc": 6880250127,
+                    "cpdc": 0,
+                    "cr": 0.016666666666666666,
+                    "ctr": 0.027210884353741496,
+                    "direct_cr": 0,
+                    "direct_cir": 0,
+                    "direct_gmv": 0,
+                    "direct_order": 0,
+                    "direct_order_amount": 0,
+                    "direct_roi": 0,
+                    "impression": 2205,
+                    "avg_rank": 33,
+                    "product_click": 1,
+                    "product_impression": 876,
+                    "product_ctr": 0.001141552511415525,
+                    "location_in_ads": 70415,
+                    "reach": 0,
+                    "page_views": 50,
+                    "unique_visitors": 0,
+                    "view": 6,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748718000",
+                "metrics": {
+                    "broad_cir": 0.04151611508282476,
+                    "broad_gmv": 68820000000,
+                    "broad_order": 2,
+                    "broad_order_amount": 4,
+                    "broad_roi": 24.087032180274992,
+                    "checkout": 2,
+                    "checkout_rate": 0.25,
+                    "click": 38,
+                    "cost": 2857139040,
+                    "cpc": 1428569520,
+                    "cpdc": 2857139040,
+                    "cr": 0.05263157894736842,
+                    "ctr": 0.030448717948717948,
+                    "direct_cr": 0.02631578947368421,
+                    "direct_cir": 0.08210169655172414,
+                    "direct_gmv": 34800000000,
+                    "direct_order": 1,
+                    "direct_order_amount": 2,
+                    "direct_roi": 12.18001627250174,
+                    "impression": 1248,
+                    "avg_rank": 30,
+                    "product_click": 1,
+                    "product_impression": 283,
+                    "product_ctr": 0.0035335689045936395,
+                    "location_in_ads": 36352,
+                    "reach": 0,
+                    "page_views": 28,
+                    "unique_visitors": 0,
+                    "view": 8,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748721600",
+                "metrics": {
+                    "broad_cir": 0.10508789925925927,
+                    "broad_gmv": 18900000000,
+                    "broad_order": 1,
+                    "broad_order_amount": 1,
+                    "broad_roi": 9.515843470549635,
+                    "checkout": 1,
+                    "checkout_rate": 0.25,
+                    "click": 19,
+                    "cost": 1986161296,
+                    "cpc": 1986161296,
+                    "cpdc": 1986161296,
+                    "cr": 0.05263157894736842,
+                    "ctr": 0.027065527065527065,
+                    "direct_cr": 0.05263157894736842,
+                    "direct_cir": 0.10508789925925927,
+                    "direct_gmv": 18900000000,
+                    "direct_order": 1,
+                    "direct_order_amount": 1,
+                    "direct_roi": 9.515843470549635,
+                    "impression": 702,
+                    "avg_rank": 26,
+                    "product_click": 1,
+                    "product_impression": 296,
+                    "product_ctr": 0.0033783783783783786,
+                    "location_in_ads": 17765,
+                    "reach": 0,
+                    "page_views": 13,
+                    "unique_visitors": 0,
+                    "view": 4,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748725200",
+                "metrics": {
+                    "broad_cir": 0,
+                    "broad_gmv": 0,
+                    "broad_order": 0,
+                    "broad_order_amount": 0,
+                    "broad_roi": 0,
+                    "checkout": 0,
+                    "checkout_rate": 0,
+                    "click": 6,
+                    "cost": 632612571,
+                    "cpc": 0,
+                    "cpdc": 0,
+                    "cr": 0,
+                    "ctr": 0.011194029850746268,
+                    "direct_cr": 0,
+                    "direct_cir": 0,
+                    "direct_gmv": 0,
+                    "direct_order": 0,
+                    "direct_order_amount": 0,
+                    "direct_roi": 0,
+                    "impression": 536,
+                    "avg_rank": 26,
+                    "product_click": 0,
+                    "product_impression": 75,
+                    "product_ctr": 0,
+                    "location_in_ads": 13290,
+                    "reach": 0,
+                    "page_views": 4,
+                    "unique_visitors": 0,
+                    "view": 0,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748728800",
+                "metrics": {
+                    "broad_cir": 0,
+                    "broad_gmv": 0,
+                    "broad_order": 0,
+                    "broad_order_amount": 0,
+                    "broad_roi": 0,
+                    "checkout": 0,
+                    "checkout_rate": 0,
+                    "click": 15,
+                    "cost": 1866198259,
+                    "cpc": 0,
+                    "cpdc": 0,
+                    "cr": 0,
+                    "ctr": 0.02177068214804064,
+                    "direct_cr": 0,
+                    "direct_cir": 0,
+                    "direct_gmv": 0,
+                    "direct_order": 0,
+                    "direct_order_amount": 0,
+                    "direct_roi": 0,
+                    "impression": 689,
+                    "avg_rank": 25,
+                    "product_click": 2,
+                    "product_impression": 209,
+                    "product_ctr": 0.009569377990430622,
+                    "location_in_ads": 16194,
+                    "reach": 0,
+                    "page_views": 9,
+                    "unique_visitors": 0,
+                    "view": 7,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748732400",
+                "metrics": {
+                    "broad_cir": 0,
+                    "broad_gmv": 0,
+                    "broad_order": 0,
+                    "broad_order_amount": 0,
+                    "broad_roi": 0,
+                    "checkout": 0,
+                    "checkout_rate": 0,
+                    "click": 14,
+                    "cost": 2384557505,
+                    "cpc": 0,
+                    "cpdc": 0,
+                    "cr": 0,
+                    "ctr": 0.013986013986013986,
+                    "direct_cr": 0,
+                    "direct_cir": 0,
+                    "direct_gmv": 0,
+                    "direct_order": 0,
+                    "direct_order_amount": 0,
+                    "direct_roi": 0,
+                    "impression": 1001,
+                    "avg_rank": 22,
+                    "product_click": 2,
+                    "product_impression": 423,
+                    "product_ctr": 0.004728132387706856,
+                    "location_in_ads": 20867,
+                    "reach": 0,
+                    "page_views": 6,
+                    "unique_visitors": 0,
+                    "view": 5,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748736000",
+                "metrics": {
+                    "broad_cir": 0.2654348430208333,
+                    "broad_gmv": 19200000000,
+                    "broad_order": 1,
+                    "broad_order_amount": 1,
+                    "broad_roi": 3.767402909954487,
+                    "checkout": 1,
+                    "checkout_rate": 0.07692307692307693,
+                    "click": 45,
+                    "cost": 5096348986,
+                    "cpc": 5096348986,
+                    "cpdc": 0,
+                    "cr": 0.022222222222222223,
+                    "ctr": 0.02437703141928494,
+                    "direct_cr": 0,
+                    "direct_cir": 0,
+                    "direct_gmv": 0,
+                    "direct_order": 0,
+                    "direct_order_amount": 0,
+                    "direct_roi": 0,
+                    "impression": 1846,
+                    "avg_rank": 20,
+                    "product_click": 1,
+                    "product_impression": 751,
+                    "product_ctr": 0.0013315579227696406,
+                    "location_in_ads": 35917,
+                    "reach": 0,
+                    "page_views": 33,
+                    "unique_visitors": 0,
+                    "view": 13,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748739600",
+                "metrics": {
+                    "broad_cir": 0.15763208693121694,
+                    "broad_gmv": 37800000000,
+                    "broad_order": 1,
+                    "broad_order_amount": 2,
+                    "broad_roi": 6.343886067031213,
+                    "checkout": 1,
+                    "checkout_rate": 0.06666666666666667,
+                    "click": 72,
+                    "cost": 5958492886,
+                    "cpc": 5958492886,
+                    "cpdc": 0,
+                    "cr": 0.013888888888888888,
+                    "ctr": 0.02577873254564984,
+                    "direct_cr": 0,
+                    "direct_cir": 0,
+                    "direct_gmv": 0,
+                    "direct_order": 0,
+                    "direct_order_amount": 0,
+                    "direct_roi": 0,
+                    "impression": 2793,
+                    "avg_rank": 21,
+                    "product_click": 7,
+                    "product_impression": 833,
+                    "product_ctr": 0.008403361344537815,
+                    "location_in_ads": 55946,
+                    "reach": 0,
+                    "page_views": 52,
+                    "unique_visitors": 0,
+                    "view": 15,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748743200",
+                "metrics": {
+                    "broad_cir": 0.22108685213508233,
+                    "broad_gmv": 35830000000,
+                    "broad_order": 1,
+                    "broad_order_amount": 2,
+                    "broad_roi": 4.523109313569709,
+                    "checkout": 1,
+                    "checkout_rate": 0.0625,
+                    "click": 83,
+                    "cost": 7921541912,
+                    "cpc": 7921541912,
+                    "cpdc": 7921541912,
+                    "cr": 0.012048192771084338,
+                    "ctr": 0.02473919523099851,
+                    "direct_cr": 0.012048192771084338,
+                    "direct_cir": 0.22108685213508233,
+                    "direct_gmv": 35830000000,
+                    "direct_order": 1,
+                    "direct_order_amount": 2,
+                    "direct_roi": 4.523109313569709,
+                    "impression": 3355,
+                    "avg_rank": 24,
+                    "product_click": 9,
+                    "product_impression": 1316,
+                    "product_ctr": 0.006838905775075988,
+                    "location_in_ads": 76756,
+                    "reach": 0,
+                    "page_views": 65,
+                    "unique_visitors": 0,
+                    "view": 16,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748746800",
+                "metrics": {
+                    "broad_cir": 0.09213006099526067,
+                    "broad_gmv": 189900000000,
+                    "broad_order": 6,
+                    "broad_order_amount": 10,
+                    "broad_roi": 10.854220535590894,
+                    "checkout": 6,
+                    "checkout_rate": 0.4,
+                    "click": 137,
+                    "cost": 17495498583,
+                    "cpc": 2915916430,
+                    "cpdc": 4373874645,
+                    "cr": 0.043795620437956206,
+                    "ctr": 0.027732793522267207,
+                    "direct_cr": 0.029197080291970802,
+                    "direct_cir": 0.13164408264108352,
+                    "direct_gmv": 132900000000,
+                    "direct_order": 4,
+                    "direct_order_amount": 7,
+                    "direct_roi": 7.596239648130752,
+                    "impression": 4940,
+                    "avg_rank": 24,
+                    "product_click": 17,
+                    "product_impression": 2415,
+                    "product_ctr": 0.007039337474120083,
+                    "location_in_ads": 114006,
+                    "reach": 0,
+                    "page_views": 103,
+                    "unique_visitors": 0,
+                    "view": 15,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748750400",
+                "metrics": {
+                    "broad_cir": 0.07118850466618287,
+                    "broad_gmv": 137800000000,
+                    "broad_order": 5,
+                    "broad_order_amount": 7,
+                    "broad_roi": 14.04721176107294,
+                    "checkout": 5,
+                    "checkout_rate": 0.29411764705882354,
+                    "click": 108,
+                    "cost": 9809775943,
+                    "cpc": 1961955188,
+                    "cpdc": 4904887971,
+                    "cr": 0.046296296296296294,
+                    "ctr": 0.022876509214149545,
+                    "direct_cr": 0.018518518518518517,
+                    "direct_cir": 0.18166251746296297,
+                    "direct_gmv": 54000000000,
+                    "direct_order": 2,
+                    "direct_order_amount": 3,
+                    "direct_roi": 5.504712881697669,
+                    "impression": 4721,
+                    "avg_rank": 24,
+                    "product_click": 23,
+                    "product_impression": 2358,
+                    "product_ctr": 0.009754028837998304,
+                    "location_in_ads": 108252,
+                    "reach": 0,
+                    "page_views": 87,
+                    "unique_visitors": 0,
+                    "view": 17,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748754000",
+                "metrics": {
+                    "broad_cir": 0.12047619411870504,
+                    "broad_gmv": 111200000000,
+                    "broad_order": 4,
+                    "broad_order_amount": 6,
+                    "broad_roi": 8.300395005960276,
+                    "checkout": 4,
+                    "checkout_rate": 0.13333333333333333,
+                    "click": 105,
+                    "cost": 13396952786,
+                    "cpc": 3349238196,
+                    "cpdc": 3349238196,
+                    "cr": 0.0380952380952381,
+                    "ctr": 0.02169421487603306,
+                    "direct_cr": 0.0380952380952381,
+                    "direct_cir": 0.12047619411870504,
+                    "direct_gmv": 111200000000,
+                    "direct_order": 4,
+                    "direct_order_amount": 6,
+                    "direct_roi": 8.300395005960276,
+                    "impression": 4840,
+                    "avg_rank": 22,
+                    "product_click": 12,
+                    "product_impression": 2846,
+                    "product_ctr": 0.004216444132115249,
+                    "location_in_ads": 100310,
+                    "reach": 0,
+                    "page_views": 80,
+                    "unique_visitors": 0,
+                    "view": 30,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748757600",
+                "metrics": {
+                    "broad_cir": 0.4841870080208333,
+                    "broad_gmv": 38400000000,
+                    "broad_order": 1,
+                    "broad_order_amount": 2,
+                    "broad_roi": 2.065317704594363,
+                    "checkout": 1,
+                    "checkout_rate": 0.03571428571428571,
+                    "click": 148,
+                    "cost": 18592781108,
+                    "cpc": 18592781108,
+                    "cpdc": 18592781108,
+                    "cr": 0.006756756756756757,
+                    "ctr": 0.028152938938558112,
+                    "direct_cr": 0.006756756756756757,
+                    "direct_cir": 0.4841870080208333,
+                    "direct_gmv": 38400000000,
+                    "direct_order": 1,
+                    "direct_order_amount": 2,
+                    "direct_roi": 2.065317704594363,
+                    "impression": 5257,
+                    "avg_rank": 20,
+                    "product_click": 24,
+                    "product_impression": 3225,
+                    "product_ctr": 0.0074418604651162795,
+                    "location_in_ads": 97257,
+                    "reach": 0,
+                    "page_views": 114,
+                    "unique_visitors": 0,
+                    "view": 28,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748761200",
+                "metrics": {
+                    "broad_cir": 0.07941832229690239,
+                    "broad_gmv": 171100000000,
+                    "broad_order": 6,
+                    "broad_order_amount": 9,
+                    "broad_roi": 12.591552819027552,
+                    "checkout": 5,
+                    "checkout_rate": 0.1724137931034483,
+                    "click": 122,
+                    "cost": 13588474945,
+                    "cpc": 2264745824,
+                    "cpdc": 13588474945,
+                    "cr": 0.04918032786885246,
+                    "ctr": 0.023443504996156803,
+                    "direct_cr": 0.00819672131147541,
+                    "direct_cir": 0.35386653502604165,
+                    "direct_gmv": 38400000000,
+                    "direct_order": 1,
+                    "direct_order_amount": 2,
+                    "direct_roi": 2.825924186152297,
+                    "impression": 5204,
+                    "avg_rank": 24,
+                    "product_click": 47,
+                    "product_impression": 3195,
+                    "product_ctr": 0.014710485133020344,
+                    "location_in_ads": 121941,
+                    "reach": 0,
+                    "page_views": 96,
+                    "unique_visitors": 0,
+                    "view": 29,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748764800",
+                "metrics": {
+                    "broad_cir": 0.34444150314814814,
+                    "broad_gmv": 37800000000,
+                    "broad_order": 1,
+                    "broad_order_amount": 2,
+                    "broad_roi": 2.9032505980264776,
+                    "checkout": 1,
+                    "checkout_rate": 0.04,
+                    "click": 127,
+                    "cost": 13019888819,
+                    "cpc": 13019888819,
+                    "cpdc": 0,
+                    "cr": 0.007874015748031496,
+                    "ctr": 0.022569752976719388,
+                    "direct_cr": 0,
+                    "direct_cir": 0,
+                    "direct_gmv": 0,
+                    "direct_order": 0,
+                    "direct_order_amount": 0,
+                    "direct_roi": 0,
+                    "impression": 5627,
+                    "avg_rank": 22,
+                    "product_click": 17,
+                    "product_impression": 3931,
+                    "product_ctr": 0.0043245993385906895,
+                    "location_in_ads": 120930,
+                    "reach": 0,
+                    "page_views": 90,
+                    "unique_visitors": 0,
+                    "view": 25,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748768400",
+                "metrics": {
+                    "broad_cir": 0.0891980309842473,
+                    "broad_gmv": 168860000000,
+                    "broad_order": 4,
+                    "broad_order_amount": 8,
+                    "broad_roi": 11.211009805548327,
+                    "checkout": 4,
+                    "checkout_rate": 0.2222222222222222,
+                    "click": 129,
+                    "cost": 15061979512,
+                    "cpc": 3765494878,
+                    "cpdc": 15061979512,
+                    "cr": 0.031007751937984496,
+                    "ctr": 0.023101719197707735,
+                    "direct_cr": 0.007751937984496124,
+                    "direct_cir": 0.3673653539512195,
+                    "direct_gmv": 41000000000,
+                    "direct_order": 1,
+                    "direct_order_amount": 2,
+                    "direct_roi": 2.7220857635170046,
+                    "impression": 5584,
+                    "avg_rank": 23,
+                    "product_click": 14,
+                    "product_impression": 4366,
+                    "product_ctr": 0.00320659642693541,
+                    "location_in_ads": 121939,
+                    "reach": 0,
+                    "page_views": 86,
+                    "unique_visitors": 0,
+                    "view": 18,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748772000",
+                "metrics": {
+                    "broad_cir": 0.08434208755060729,
+                    "broad_gmv": 118560000000,
+                    "broad_order": 3,
+                    "broad_order_amount": 6,
+                    "broad_roi": 11.856476748930074,
+                    "checkout": 3,
+                    "checkout_rate": 0.15,
+                    "click": 132,
+                    "cost": 9999597900,
+                    "cpc": 3333199300,
+                    "cpdc": 9999597900,
+                    "cr": 0.022727272727272728,
+                    "ctr": 0.02526315789473684,
+                    "direct_cr": 0.007575757575757576,
+                    "direct_cir": 0.264539626984127,
+                    "direct_gmv": 37800000000,
+                    "direct_order": 1,
+                    "direct_order_amount": 2,
+                    "direct_roi": 3.7801519999119164,
+                    "impression": 5225,
+                    "avg_rank": 20,
+                    "product_click": 6,
+                    "product_impression": 3216,
+                    "product_ctr": 0.0018656716417910447,
+                    "location_in_ads": 100074,
+                    "reach": 0,
+                    "page_views": 96,
+                    "unique_visitors": 0,
+                    "view": 20,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748775600",
+                "metrics": {
+                    "broad_cir": 0.0864426299522673,
+                    "broad_gmv": 125700000000,
+                    "broad_order": 5,
+                    "broad_order_amount": 6,
+                    "broad_roi": 11.568366216439612,
+                    "checkout": 5,
+                    "checkout_rate": 0.29411764705882354,
+                    "click": 125,
+                    "cost": 10865838585,
+                    "cpc": 2173167717,
+                    "cpdc": 2173167717,
+                    "cr": 0.04,
+                    "ctr": 0.02592823065753993,
+                    "direct_cr": 0.04,
+                    "direct_cir": 0.0864426299522673,
+                    "direct_gmv": 125700000000,
+                    "direct_order": 5,
+                    "direct_order_amount": 6,
+                    "direct_roi": 11.568366216439612,
+                    "impression": 4821,
+                    "avg_rank": 20,
+                    "product_click": 15,
+                    "product_impression": 3848,
+                    "product_ctr": 0.0038981288981288983,
+                    "location_in_ads": 93855,
+                    "reach": 0,
+                    "page_views": 92,
+                    "unique_visitors": 0,
+                    "view": 17,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748779200",
+                "metrics": {
+                    "broad_cir": 0.09046008208681135,
+                    "broad_gmv": 119800000000,
+                    "broad_order": 3,
+                    "broad_order_amount": 6,
+                    "broad_roi": 11.05459974091484,
+                    "checkout": 3,
+                    "checkout_rate": 0.1111111111111111,
+                    "click": 120,
+                    "cost": 10837117834,
+                    "cpc": 3612372611,
+                    "cpdc": 0,
+                    "cr": 0.025,
+                    "ctr": 0.02490143183233036,
+                    "direct_cr": 0,
+                    "direct_cir": 0,
+                    "direct_gmv": 0,
+                    "direct_order": 0,
+                    "direct_order_amount": 0,
+                    "direct_roi": 0,
+                    "impression": 4819,
+                    "avg_rank": 19,
+                    "product_click": 8,
+                    "product_impression": 4079,
+                    "product_ctr": 0.001961265015935278,
+                    "location_in_ads": 88705,
+                    "reach": 0,
+                    "page_views": 81,
+                    "unique_visitors": 0,
+                    "view": 27,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748782800",
+                "metrics": {
+                    "broad_cir": 0.12582505644613584,
+                    "broad_gmv": 170800000000,
+                    "broad_order": 6,
+                    "broad_order_amount": 9,
+                    "broad_roi": 7.9475426297788925,
+                    "checkout": 6,
+                    "checkout_rate": 0.13953488372093023,
+                    "click": 179,
+                    "cost": 21490919641,
+                    "cpc": 3581819940,
+                    "cpdc": 5372729910,
+                    "cr": 0.0335195530726257,
+                    "ctr": 0.02753846153846154,
+                    "direct_cr": 0.0223463687150838,
+                    "direct_cir": 0.22386374626041666,
+                    "direct_gmv": 96000000000,
+                    "direct_order": 4,
+                    "direct_order_amount": 5,
+                    "direct_roi": 4.46700288324809,
+                    "impression": 6500,
+                    "avg_rank": 20,
+                    "product_click": 28,
+                    "product_impression": 6276,
+                    "product_ctr": 0.004461440407903123,
+                    "location_in_ads": 125554,
+                    "reach": 0,
+                    "page_views": 126,
+                    "unique_visitors": 0,
+                    "view": 43,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748786400",
+                "metrics": {
+                    "broad_cir": 0.07272404862464184,
+                    "broad_gmv": 209400000000,
+                    "broad_order": 6,
+                    "broad_order_amount": 11,
+                    "broad_roi": 13.75060958392737,
+                    "checkout": 5,
+                    "checkout_rate": 0.14285714285714285,
+                    "click": 190,
+                    "cost": 15228415782,
+                    "cpc": 2538069297,
+                    "cpdc": 3045683156,
+                    "cr": 0.031578947368421054,
+                    "ctr": 0.023705552089831567,
+                    "direct_cr": 0.02631578947368421,
+                    "direct_cir": 0.08936863721830986,
+                    "direct_gmv": 170400000000,
+                    "direct_order": 5,
+                    "direct_order_amount": 9,
+                    "direct_roi": 11.189607798955223,
+                    "impression": 8015,
+                    "avg_rank": 20,
+                    "product_click": 41,
+                    "product_impression": 7594,
+                    "product_ctr": 0.005398999209902554,
+                    "location_in_ads": 153441,
+                    "reach": 0,
+                    "page_views": 139,
+                    "unique_visitors": 0,
+                    "view": 35,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748790000",
+                "metrics": {
+                    "broad_cir": 0.14284723549327355,
+                    "broad_gmv": 133800000000,
+                    "broad_order": 4,
+                    "broad_order_amount": 7,
+                    "broad_roi": 7.000485494499391,
+                    "checkout": 4,
+                    "checkout_rate": 0.08695652173913043,
+                    "click": 232,
+                    "cost": 19112960109,
+                    "cpc": 4778240027,
+                    "cpdc": 4778240027,
+                    "cr": 0.017241379310344827,
+                    "ctr": 0.02609380272185356,
+                    "direct_cr": 0.017241379310344827,
+                    "direct_cir": 0.14284723549327355,
+                    "direct_gmv": 133800000000,
+                    "direct_order": 4,
+                    "direct_order_amount": 7,
+                    "direct_roi": 7.000485494499391,
+                    "impression": 8891,
+                    "avg_rank": 20,
+                    "product_click": 13,
+                    "product_impression": 7897,
+                    "product_ctr": 0.0016461947575028492,
+                    "location_in_ads": 169659,
+                    "reach": 0,
+                    "page_views": 173,
+                    "unique_visitors": 0,
+                    "view": 46,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            },
+            {
+                "cps_setting": {
+                    "is_cps": false
+                },
+                "new_product_boost_setting": {
+                    "is_boosting": false
+                },
+                "new_product_boost_two_setting": {
+                    "is_boosting": false
+                },
+                "product_npa_setting": null,
+                "roi_target_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "target_broad_roi_setting": {
+                    "is_cold_start": false,
+                    "value": 0
+                },
+                "key": "1748793600",
+                "metrics": {
+                    "broad_cir": 0.07217448321142285,
+                    "broad_gmv": 199600000000,
+                    "broad_order": 5,
+                    "broad_order_amount": 10,
+                    "broad_roi": 13.855312230926137,
+                    "checkout": 5,
+                    "checkout_rate": 0.125,
+                    "click": 206,
+                    "cost": 14406026849,
+                    "cpc": 2881205369,
+                    "cpdc": 4802008949,
+                    "cr": 0.024271844660194174,
+                    "ctr": 0.022513661202185793,
+                    "direct_cr": 0.014563106796116505,
+                    "direct_cir": 0.1167425190356564,
+                    "direct_gmv": 123400000000,
+                    "direct_order": 3,
+                    "direct_order_amount": 6,
+                    "direct_roi": 8.56585936521185,
+                    "impression": 9150,
+                    "avg_rank": 20,
+                    "product_click": 14,
+                    "product_impression": 6145,
+                    "product_ctr": 0.002278275020341741,
+                    "location_in_ads": 171615,
+                    "reach": 0,
+                    "page_views": 166,
+                    "unique_visitors": 0,
+                    "view": 40,
+                    "cpm": 0,
+                    "unique_click_user": 0
+                }
+            }
+        ],
+        "report_aggregate": {
+            "broad_cir": 0.11011679926925338,
+            "broad_gmv": 2262070000000,
+            "broad_order": 70,
+            "broad_order_amount": 117,
+            "broad_roi": 9.081266497356486,
+            "checkout": 68,
+            "checkout_rate": 0.14345991561181434,
+            "click": 2535,
+            "cost": 249091908123,
+            "cpc": 3558455830,
+            "cpdc": 6075412393,
+            "cr": 0.027613412228796843,
+            "ctr": 0.0247727939020815,
+            "direct_cr": 0.016173570019723867,
+            "direct_cir": 0.19650206142407484,
+            "direct_gmv": 1267630000000,
+            "direct_order": 41,
+            "direct_order_amount": 66,
+            "direct_roi": 5.089005136907347,
+            "impression": 102330,
+            "avg_rank": 22,
+            "product_click": 311,
+            "product_impression": 68468,
+            "product_ctr": 0.004542267920780511,
+            "location_in_ads": 2143826,
+            "reach": 0,
+            "page_views": 1885,
+            "unique_visitors": 0,
+            "view": 474,
+            "cpm": 0,
+            "unique_click_user": 0
+        }
+    }
+}

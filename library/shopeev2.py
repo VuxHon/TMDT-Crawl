@@ -118,9 +118,9 @@ class Shopee:
             "report_id": report_id
         }
         response = requests.get(url, params=params, headers=self.headers_dict)
-        with open(f"orders_shopee/{report_file_name}", "wb") as f:
+        with open(f"../ConvertDataEcom/data/SHOPEE/ORDER_SHOPEE/{report_file_name}", "wb") as f:
             f.write(response.content)
-        return f"orders_shopee/{report_file_name}"
+        return f"../ConvertDataEcom/data/SHOPEE/ORDER_SHOPEE/{report_file_name}"
     
     def get_order_report(self, start_date, end_date):
         url = "https://banhang.shopee.vn/api/v3/order/request_order_report"
@@ -141,3 +141,18 @@ class Shopee:
             print("Waiting for report to be completed")
             time.sleep(2)
         return self.get_content_report(report_id, report_file_name)
+    def get_ads_stat(self, start_time, end_time):
+        url = "https://banhang.shopee.vn/api/pas/v1/report/get_time_graph/"
+        params = {
+            "SPC_CDS": self.SPC_CDS,
+            "SPC_CDS_VER": 2,
+        }
+        payload = {
+            "agg_interval": 4,
+            "campaign_type": "new_cpc_homepage",
+            "start_time": start_time,
+            "end_time": end_time,
+            "need_roi_target_setting": False
+        }
+        response = requests.post(url, params=params, headers=self.headers_dict, json=payload)
+        return response.json()

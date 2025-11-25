@@ -19,7 +19,7 @@ pg.connect()
 # Lấy dữ liệu từ API
 time_delta = 0
 end = datetime.now().replace(hour=23, minute=59, second=59) - timedelta(days=time_delta)
-start = datetime.now().replace(hour=0, minute=0, second=0) - timedelta(days=time_delta + 1)
+start = datetime.now().replace(hour=0, minute=0, second=0) - timedelta(days=time_delta + 30)
 tiktok = Tiktok()
 
 response = tiktok.post_overview_stat(start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d"))

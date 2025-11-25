@@ -331,5 +331,13 @@ class Tiktok:
             ]
         }
         response = requests.post(url, headers=header, json=payload)
-        logging.info(f"API Response: {response.content}")
-        return json.loads(response.content)
+        # Sử dụng response.json() để tự động xử lý decompression (gzip) và parse JSON
+        try:
+            response_data = response.json()
+            logging.info(f"API Response status: {response.status_code}")
+            return response_data
+        except json.JSONDecodeError as e:
+            logging.error(f"Failed to parse JSON response: {e}")
+            logging.error(f"Response content (first 500 chars): {response.text[:500]}")
+            logging.error(f"Response headers: {response.headers}")
+            raise
