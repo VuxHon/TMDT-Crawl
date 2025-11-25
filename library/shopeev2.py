@@ -138,7 +138,7 @@ class Shopee:
         report_file_name = response.json()['data']['report_file_name']
         
         while self.get_report_status(report_id) == 1:
-            print("Waiting for report to be completed")
+            logging.info("Waiting for report to be completed")
             time.sleep(2)
         return self.get_content_report(report_id, report_file_name)
     def get_ads_stat(self, start_time, end_time):
