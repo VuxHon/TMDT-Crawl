@@ -8,17 +8,19 @@ from random import randrange
 import json
 import logging
 import os
+from urllib.parse import urlencode
 def create_curl_request(url, payload, headers):
     curl_request = f"curl -X POST '{url}' -H '{headers}' -d '{payload}'"
     return curl_request
 class Tiktok:
-    def __init__(self):
+    def __init__(self, shop_name: str):
+        self.shop_name = shop_name
         self.lark_helper = Lark()
         self.headers = None
         self.params = None
         self._init_headers()
     def _init_headers(self):
-        curl_data = self.lark_helper.get_lark_base_record(cf.PEEKIE_BASE_ID, cf.PEEKIE_TABLE_ID, cf.PEEKIE_RECORD_ID["DUNI_TIKTOK"], "body")
+        curl_data = self.lark_helper.get_lark_base_record(cf.PEEKIE_BASE_ID, cf.PEEKIE_TABLE_ID, cf.PEEKIE_RECORD_ID[self.shop_name], "body")
         object_curl_data = Helper.decode_curl_data_from_lark(curl_data)
         self.headers = object_curl_data['headers']
         url = object_curl_data['url']
@@ -341,3 +343,90 @@ class Tiktok:
             logging.error(f"Response content (first 500 chars): {response.text[:500]}")
             logging.error(f"Response headers: {response.headers}")
             raise
+    
+    def get_return_logistics_info(self, reverse_main_order_id):
+        try:
+            url = f"https://seller-vn.tiktok.com/api/v1/reverse/orders/actions/check_return_logistics"
+            payload = {
+                "reverse_main_order_id": reverse_main_order_id
+            }
+            response = requests.post(url, headers=self.headers, json=payload).json()
+            tracking_no = response['data']['package_list'][0]['tracking_no']
+            status = response['data']['package_list'][0]['logistic_detail']['track_list'][0]['content']
+            return {
+                "tracking_no": tracking_no,
+                "status": status
+            }
+        except Exception as e:
+            return {
+                "tracking_no": None,
+                "status": None
+            }
+    
+    def get_order_return_list(self, offset = 0):
+        logging.info(f"Getting order return list with offset: {offset}")
+        url = "https://seller-vn.tiktok.com/api/v1/reverse/component/orders/list?locale=vi-VN&language=vi-VN"
+        payload = {
+            "pagination_type": 0,
+            "count": 50,
+            "offset": offset,
+            "search_condition": {
+                "tab": {
+                    "str_value_list": [
+                        "100"
+                    ]
+                },
+                "order_sort_comp": {
+                    "str_value_list": [
+                        "OrderSort_UPADTE_TIME_DESC"
+                    ]
+                }
+            }
+        }
+        if offset > 0:
+            payload['component_version'] = "hit_opt_aware_revamp"
+        response = requests.post(url, headers=self.headers, json=payload).json()
+        logging.info(f"Response: {response}")
+        return response
+    
+    def get_product_skus(self, page=1):
+        url = f"https://seller-vn.tiktok.com/api/v1/product/stock/sku/list?aid=4068"
+        payload = {
+            "warehouse_ids": [
+                "7277496135663847174"
+            ],
+            "search_back_order_list": [],
+            "sort_type": [
+                {
+                    "field": 1,
+                    "type": 1
+                }
+            ],
+            "page": page,
+            "size": 50,
+            "is_need_toggle_status": False,
+            "time_interval_filter": 4,
+            "alert_value_filter": [],
+            "is_need_target_stock": True
+        }
+                    
+        response = requests.post(url, headers=self.headers, json=payload).json()
+        return response
+    
+    def get_products(self, page=1):
+        url = "https://seller-vn.tiktok.com/api/v1/product/stock/product/list?aid=4068"
+        payload = {
+            "warehouse_ids": [],
+            "search_back_order_list": [],
+            "sort_type": [
+                {
+                    "field": 4,
+                    "type": 1
+                }
+            ],
+            "page": page,
+            "size": 50,
+            "is_need_toggle_status": True
+        }
+        response = requests.post(url, headers=self.headers, json=payload).json()
+        return response

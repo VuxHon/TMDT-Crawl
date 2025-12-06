@@ -156,3 +156,57 @@ class Shopee:
         }
         response = requests.post(url, params=params, headers=self.headers_dict, json=payload)
         return response.json()
+    
+    def get_order_return(self, page_number = 1, page_size = 40, case_tab = 1):
+        url = "https://banhang.shopee.vn/api/v4/seller_center/return/return_list/get_exceptional_case_list"
+        params = {
+            "SPC_CDS": self.SPC_CDS,
+            "SPC_CDS_VER": 2,
+        }
+        payload = {
+            "language": "vi",
+            "is_reverse_sorting_order": False,
+            "page_number": 1,
+            "page_size": 40,
+            "keyword": None,
+            "pending_action": None,
+            "request_solution": None,
+            "forward_logistics_statuses": [],
+            "reverse_logistics_statuses": [],
+            "return_reasons": [],
+            "create_time_range": {
+                "lower_value": None,
+                "upper_value": None
+            },
+            "compensation_amount_option": None,
+            "advanced_fulfilment_option": None,
+            "seller_request_statuses": [],
+            "validation_type_option": None,
+            "request_adjusted": None,
+            "refund_amount_range": {
+                "lower_value": None,
+                "upper_value": None
+            },
+            "flow_tab": 1,
+            "case_tab": case_tab,
+            "sorting_field": 2,
+            "key_action_due_time_range": {
+                "lower_value": None,
+                "upper_value": None
+            },
+            "platform_type": "sc"
+        }
+        response = requests.post(url, params=params, headers=self.headers_dict, json=payload)
+        return response.json()
+    
+    def get_products(self, page_number = 1, page_size = 48):
+        url = "https://banhang.shopee.vn/api/v3/opt/mpsku/list/v2/search_product_list"
+        params = {
+            "SPC_CDS": self.SPC_CDS,
+            "SPC_CDS_VER": 2,
+            "page_number": page_number,
+            "page_size": page_size,
+            "list_type": "all"
+        }
+        response = requests.get(url, params=params, headers=self.headers_dict)
+        return response.json()
