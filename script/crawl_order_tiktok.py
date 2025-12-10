@@ -52,47 +52,36 @@ if response.get('code') == 0 and 'data' in response and 'chart' in response['dat
             onsite_roi2_shopping_value = float(series_dict.get('onsite_roi2_shopping_value', [0])[idx]) if idx < len(series_dict.get('onsite_roi2_shopping_value', [])) else None
             onsite_roi2_shopping = float(series_dict.get('onsite_roi2_shopping', [0])[idx]) if idx < len(series_dict.get('onsite_roi2_shopping', [])) else None
             
-            # Kiểm tra xem date đã tồn tại chưa
+            # Check if record exists before to count insert/update
             check_query = "SELECT date FROM tiktok_ads_stat WHERE date = %s"
             existing = pg.fetch_one(check_query, (date_obj,))
             
-            if existing:
-                # Update nếu đã tồn tại
-                update_query = """
-                UPDATE tiktok_ads_stat 
-                SET cost = %s,
-                    onsite_roi2_shopping_sku = %s,
-                    cost_per_onsite_roi2_shopping_sku = %s,
-                    onsite_roi2_shopping_value = %s,
-                    onsite_roi2_shopping = %s,
-                    updated_at = CURRENT_TIMESTAMP
-                WHERE date = %s
-                """
-                pg.execute(update_query, (
-                    cost,
-                    onsite_roi2_shopping_sku,
-                    cost_per_onsite_roi2_shopping_sku,
-                    onsite_roi2_shopping_value,
-                    onsite_roi2_shopping,
-                    date_obj
-                ))
-                update_count += 1
-            else:
-                # Insert nếu chưa tồn tại
-                insert_query = """
+            # Use ON CONFLICT for upsert
+            query = """
                 INSERT INTO tiktok_ads_stat 
                 (date, cost, onsite_roi2_shopping_sku, cost_per_onsite_roi2_shopping_sku, 
                  onsite_roi2_shopping_value, onsite_roi2_shopping)
                 VALUES (%s, %s, %s, %s, %s, %s)
-                """
-                pg.execute(insert_query, (
-                    date_obj,
-                    cost,
-                    onsite_roi2_shopping_sku,
-                    cost_per_onsite_roi2_shopping_sku,
-                    onsite_roi2_shopping_value,
-                    onsite_roi2_shopping
-                ))
+                ON CONFLICT (date) DO UPDATE SET
+                    cost = EXCLUDED.cost,
+                    onsite_roi2_shopping_sku = EXCLUDED.onsite_roi2_shopping_sku,
+                    cost_per_onsite_roi2_shopping_sku = EXCLUDED.cost_per_onsite_roi2_shopping_sku,
+                    onsite_roi2_shopping_value = EXCLUDED.onsite_roi2_shopping_value,
+                    onsite_roi2_shopping = EXCLUDED.onsite_roi2_shopping,
+                    updated_at = CURRENT_TIMESTAMP
+            """
+            pg.execute(query, (
+                date_obj,
+                cost,
+                onsite_roi2_shopping_sku,
+                cost_per_onsite_roi2_shopping_sku,
+                onsite_roi2_shopping_value,
+                onsite_roi2_shopping
+            ))
+            
+            if existing:
+                update_count += 1
+            else:
                 insert_count += 1
                 
         except Exception as e:

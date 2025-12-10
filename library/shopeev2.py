@@ -157,6 +157,23 @@ class Shopee:
         response = requests.post(url, params=params, headers=self.headers_dict, json=payload)
         return response.json()
     
+    def get_order_return_detail(self, return_id):
+        url = "https://banhang.shopee.vn/api/v1/return/detail"
+        params = {
+            "SPC_CDS": self.SPC_CDS,
+            "SPC_CDS_VER": 2,
+            "return_id": return_id,
+            "language": "vi",
+            "platform": "sc"
+        }
+        response = requests.get(url, params=params, headers=self.headers_dict).json()
+        if response.get('data') is None:
+            logging.info(f"Params: {params}")
+            logging.error(f"Error: {response.get('data')}")
+            logging.error(f"Response: {response}")
+            return None
+        return response
+    
     def get_order_return(self, page_number = 1, page_size = 40, case_tab = 1):
         url = "https://banhang.shopee.vn/api/v4/seller_center/return/return_list/get_exceptional_case_list"
         params = {
@@ -166,7 +183,7 @@ class Shopee:
         payload = {
             "language": "vi",
             "is_reverse_sorting_order": False,
-            "page_number": 1,
+            "page_number": page_number,
             "page_size": 40,
             "keyword": None,
             "pending_action": None,
@@ -189,7 +206,7 @@ class Shopee:
             },
             "flow_tab": 1,
             "case_tab": case_tab,
-            "sorting_field": 2,
+            "sorting_field": 1,
             "key_action_due_time_range": {
                 "lower_value": None,
                 "upper_value": None
@@ -199,14 +216,18 @@ class Shopee:
         response = requests.post(url, params=params, headers=self.headers_dict, json=payload)
         return response.json()
     
-    def get_products(self, page_number = 1, page_size = 48):
+    def get_products(self, last_cursor = None, page_size = 48):
         url = "https://banhang.shopee.vn/api/v3/opt/mpsku/list/v2/search_product_list"
         params = {
             "SPC_CDS": self.SPC_CDS,
             "SPC_CDS_VER": 2,
-            "page_number": page_number,
             "page_size": page_size,
-            "list_type": "all"
+            "list_type": "all",
+            "request_attribute": None,
+            "operation_sort_by": "recommend_v2",
+            "need_ads": True
         }
+        if last_cursor is not None:
+            params["cursor"] = last_cursor
         response = requests.get(url, params=params, headers=self.headers_dict)
         return response.json()

@@ -363,6 +363,31 @@ class Tiktok:
                 "status": None
             }
     
+    def get_order_failed_delivery(self, offset = 0):
+        url = "https://seller-vn.tiktok.com/api/fulfillment/order/list?locale=vi-VN&language=vi-VN&aid=4068"
+        payload = {
+            "search_condition": {
+                "condition_list": {
+                    "abnormal_pkg_tag": {
+                        "value": [
+                            "ALL_FAIL_DELIVERY"
+                        ]
+                    },
+                    "search_tab": {
+                        "value": [
+                            "105"
+                        ]
+                    }
+                }
+            },
+            "offset": offset,
+            "count": 50,
+            "sort_info": "6",
+            "pagination_type": 0
+        }
+        response = requests.post(url, headers=self.headers, json=payload).json()
+        return response
+    
     def get_order_return_list(self, offset = 0):
         logging.info(f"Getting order return list with offset: {offset}")
         url = "https://seller-vn.tiktok.com/api/v1/reverse/component/orders/list?locale=vi-VN&language=vi-VN"
@@ -381,10 +406,9 @@ class Tiktok:
                         "OrderSort_UPADTE_TIME_DESC"
                     ]
                 }
-            }
+            },
+            "component_version": "hit_opt_aware_revamp"
         }
-        if offset > 0:
-            payload['component_version'] = "hit_opt_aware_revamp"
         response = requests.post(url, headers=self.headers, json=payload).json()
         logging.info(f"Response: {response}")
         return response
@@ -427,6 +451,14 @@ class Tiktok:
             "page": page,
             "size": 50,
             "is_need_toggle_status": True
+        }
+        response = requests.post(url, headers=self.headers, json=payload).json()
+        return response
+    
+    def get_order_detail(self, main_order_id):
+        url = f"https://seller-vn.tiktok.com/api/fulfillment/order/get?aid=4068&locale=vi-VN"
+        payload = {
+            "main_order_id": [main_order_id]
         }
         response = requests.post(url, headers=self.headers, json=payload).json()
         return response
