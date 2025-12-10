@@ -247,29 +247,29 @@ def process_order_failed_delivery(offset):
                 logging.error(f"Error inserting/updating order return sku {sku_id}: {e}")
                 raise
 
-# page = 5
-# offset = 0
-# retry_count = 0
-# while page > 0:
-#     try:
-#         process_order_return(offset)
-#         pg.commit()
-#         logging.info(f"committed order return with offset: {offset}")
-#         retry_count = 0
-#         offset += 50
-#         page -= 1
-#     except:
-#         logging.info(f"retry order return with offset: {offset}")
-#         retry_count += 1
-#         if retry_count > 5:
-#             logging.error(f"retry order return with offset: {offset} failed after 5 retries")
-#             offset += 50
-#             page -= 1
-#         else:
-#             pass
+page = 5
+offset = 0
+retry_count = 0
+while page > 0:
+    try:
+        process_order_return(offset)
+        pg.commit()
+        logging.info(f"committed order return with offset: {offset}")
+        retry_count = 0
+        offset += 50
+        page -= 1
+    except:
+        logging.info(f"retry order return with offset: {offset}")
+        retry_count += 1
+        if retry_count > 5:
+            logging.error(f"retry order return with offset: {offset} failed after 5 retries")
+            offset += 50
+            page -= 1
+        else:
+            pass
     
-page = 1
-offset = 200
+page = 5
+offset = 0
 retry_count = 0
 while page > 0:
     try:

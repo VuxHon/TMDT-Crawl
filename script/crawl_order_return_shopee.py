@@ -15,6 +15,35 @@ SOURCE = "DUNI_SHOPEE"
 shopee = Shopee(SOURCE)
 pg = Postgres()
 pg.connect()
+def insert_product_sku(order_id):
+    order_detail = shopee.get_one_order(order_id)
+    sku_module = order_detail['data']['order_items']
+    for product in sku_module:
+        product_id = int(product['item_id'])
+        product_name = product['product']['name']
+        product_image_url = f"https://cf.shopee.vn/file/{product['product']['images'][0]}" if product['product']['images'][0] else None
+        insert_product_query = """
+            INSERT INTO ecom_products (id, name, cover_image, shop_name)
+            VALUES (%s, %s, %s, %s)
+            ON CONFLICT (id) DO UPDATE SET
+                name = EXCLUDED.name,
+                cover_image = EXCLUDED.cover_image,
+                shop_name = EXCLUDED.shop_name
+        """
+        pg.execute(insert_product_query, (product_id, product_name, product_image_url, SOURCE))
+        pg.commit()
+        sku_id = int(product['item_model']['model_id'])
+        sku_name = product['item_model']['name']
+        sku_image_url = product_image_url
+        insert_sku_query = """
+            INSERT INTO ecom_sku_products (product_id, id, name, image)
+            VALUES (%s, %s, %s, %s)
+            ON CONFLICT (product_id, id) DO UPDATE SET
+                name = EXCLUDED.name,
+                image = EXCLUDED.image
+        """
+        pg.execute(insert_sku_query, (product_id, sku_id, sku_name, sku_image_url))
+        pg.commit()
 def process_order_return(case_tab, page_number):
     order_return = shopee.get_order_return(page_number=page_number, page_size=40, case_tab=case_tab)['data']['exceptional_case_list']
     for order in order_return:
@@ -89,6 +118,13 @@ def process_order_return(case_tab, page_number):
         
         for product_item in order['product_items']:
             # ON CONFLICT will update all specified columns with new values from EXCLUDED
+            sku_id = int(product_item['model']['id'])
+            check_sku_query = f"""
+                SELECT id FROM ecom_sku_products WHERE id = {sku_id}
+            """
+            existing_sku = pg.fetch_one(check_sku_query)
+            if not existing_sku:
+                insert_product_sku(order['order_id'])
             query = """
                 INSERT INTO ecom_orders_sku_return_refund (return_sn, sku_id, returned_amount, order_id)
                 VALUES (%s, %s, %s, %s)

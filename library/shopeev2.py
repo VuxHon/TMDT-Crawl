@@ -231,3 +231,13 @@ class Shopee:
             params["cursor"] = last_cursor
         response = requests.get(url, params=params, headers=self.headers_dict)
         return response.json()
+    
+    def get_one_order(self, order_id):
+        url = "https://banhang.shopee.vn/api/v3/order/get_one_order"
+        params = {
+            "SPC_CDS": self.SPC_CDS,
+            "SPC_CDS_VER": 2,
+            "order_id": order_id
+        }
+        response = requests.get(url, params=params, headers=self.headers_dict)
+        return response.json()
