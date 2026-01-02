@@ -123,3 +123,8 @@ class Sapo:
         response = requests.get(url, params=params, headers=self.headers)
         logging.info(f"SPX TN: {spx_tn.upper()}")
         return response
+    
+    def get_orders_list(self, page=1, connection_id="108710"):
+        url = f"https://market-place.sapoapps.vn/v2/orders?limit=100&sortBy=ISSUED_AT&orderBy=desc&page={page}&connectionIds={connection_id}"
+        response = requests.get(url, headers=self.headers)
+        return response.json()

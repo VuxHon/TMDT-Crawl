@@ -3,3 +3,4 @@
 /orders_shopee
 /orders_tiktok
 .env
+/script/test.py

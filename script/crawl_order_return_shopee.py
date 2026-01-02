@@ -160,7 +160,7 @@ def delete_order_canceled(page_number):
     # Truyền danh sách order_sn vào hàm execute như một tham số tuple
     pg.execute(query, tuple(order_sn)) # Hoặc pg.execute(query, order_sn) tùy vào thư viện
 
-for page_number in range(1, 20):
+for page_number in range(1, 5):
     try:
         logging.info(f"Processing page {page_number}, case_tab=1")
         process_order_return(case_tab=1, page_number=page_number)

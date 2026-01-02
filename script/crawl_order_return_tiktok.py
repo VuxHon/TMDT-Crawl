@@ -99,7 +99,8 @@ def process_order_return(offset):
         refund_amount = int(return_price_str) if return_price_str else 0
         
         reason_block = get_components_data(order['card']['blocks'], 'reason_block')
-        request_reason = reason_block['title']['text']['content'] if reason_block else None
+        request_reason = reason_block['content'][0]['text_pair']['content']['content'] if reason_block else None
+        logging.info(f"request_reason: {request_reason}")
         
         status_block = get_components_data(order['card']['blocks'], 'status_block')
         status_text = None
