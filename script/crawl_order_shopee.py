@@ -16,7 +16,7 @@ pg = Postgres()
 pg.connect()
 
 # human date: YYYY-MM-DD
-start_date = datetime.now() - timedelta(days=30)
+start_date = datetime.now() - timedelta(days=7)
 start_date = start_date.strftime("%Y-%m-%d")
 end_date = datetime.now().strftime("%Y-%m-%d")
 logging.info(shopee.get_order_report(start_date, end_date))

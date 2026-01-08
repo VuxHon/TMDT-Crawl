@@ -9,6 +9,7 @@ from random import randrange
 import requests
 import logging
 import re
+import os
 class Shopee:
     def __init__(self, shop_name: str):
         self.shop_name = shop_name
@@ -118,9 +119,21 @@ class Shopee:
             "report_id": report_id
         }
         response = requests.get(url, params=params, headers=self.headers_dict)
-        with open(f"../ConvertDataEcom/data/SHOPEE/ORDER_SHOPEE/{report_file_name}", "wb") as f:
+        
+        # Get the directory of this file and build absolute path
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # Go up one level from library/ to TMDT-Crawl/, then to ConvertDataEcom/
+        base_dir = os.path.dirname(os.path.dirname(current_dir))
+        data_dir = os.path.join(base_dir, "ConvertDataEcom", "data", "Shopee", "Order_Shopee")
+        
+        # Create directory if it doesn't exist
+        os.makedirs(data_dir, exist_ok=True)
+        
+        file_path = os.path.join(data_dir, report_file_name)
+        with open(file_path, "wb") as f:
             f.write(response.content)
-        return f"../ConvertDataEcom/data/SHOPEE/ORDER_SHOPEE/{report_file_name}"
+        logging.info(f"Report saved to: {file_path}")
+        return file_path
     
     def get_order_report(self, start_date, end_date):
         url = "https://banhang.shopee.vn/api/v3/order/request_order_report"
